@@ -23,6 +23,7 @@ class Card(object):
 def deal_cards():
 	pass
 
+
 Game = Window()
 WHITE = (255, 255 , 255)
 GREEN = (0, 200, 100)
@@ -40,10 +41,6 @@ while not done:
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT:
 			print("User asked to quit.")
-		elif event.type == pygame.KEYDOWN:
-			print("User pressed a key.")
-		elif event.type == pygame.KEYUP:
-			print("User let go of a key.")
 		elif event.type == pygame.MOUSEBUTTONDOWN:
 			print("User pressed a mouse button") 
     # --- Drawing code should go here
@@ -54,11 +51,12 @@ while not done:
  
     # --- Go ahead and update the screen with what we've drawn.
 	pygame.display.flip()
+	clock.tick(60)
+
 """Use in case I have sprites, for later:
 
 	screen.blit(background, (0, 0))
 	allsprites.draw(screen)
 	pygame.display.flip() """
-	
-    # --- Limit to 60 frames per second
-	clock.tick(60)
+
+	# --- Limit to 60 frames per second
