@@ -36,13 +36,10 @@ while not done:
 	for event in pygame.event.get(): # User did something
 		if event.type == pygame.QUIT: # If user clicked close
 			done = True # Flag that we are done so we exit this loop
- 
+ 		elif event.type == pygame.MOUSEBUTTONDOWN:
+ 			print "User pressed the mouse button"
     # --- Game logic should go here
-	for event in pygame.event.get():
-		if event.type == pygame.QUIT:
-			print("User asked to quit.")
-		elif event.type == pygame.MOUSEBUTTONDOWN:
-			print("User pressed a mouse button") 
+    
     # --- Drawing code should go here
  
     # First, clear the screen to green. Don't put other drawing commands
